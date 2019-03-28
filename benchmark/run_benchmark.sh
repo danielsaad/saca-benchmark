@@ -6,9 +6,9 @@
 echo "Compiling Executables"
 cd ..
 mkdir -p build
-cd build 
-cmake .. > /dev/null
-make install > /dev/null
+cd build
+cmake ..
+make install
 
 cd ../benchmark
 
@@ -27,7 +27,7 @@ done
 
 cd ../manzini
 echo "Downloading Manzini Corpus" 
-aria2c -i ../manzini.info -c --auto-file-renaming=false  > /dev/null
+aria2c -i ../manzini.info -c --auto-file-renaming=false 
 echo "Extracting Manzini Corpus"
 for f in *.bz2
 do
@@ -35,3 +35,4 @@ do
 done
 
 echo "Running Benchmark"
+python3 run_saca.py
