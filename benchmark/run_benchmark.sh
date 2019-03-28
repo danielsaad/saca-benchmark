@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# Use aria2 to download corpora
+
+
+echo "Compiling Executables"
+cd ..
+mkdir -p build
+cd build 
+cmake .. > /dev/null
+make install > /dev/null
+
+cd ../benchmark
+
+echo "Creating Corpora Folders"
+mkdir -p ../corpora/pizza-chili-repetitive
+mkdir -p ../corpora/manzini
+
+cd ../corpora/pizza-chili-repetitive
+echo "Downloading Pizza-Chili Corpus"
+aria2c -i ../pizza-chili-repetitive.info -c --auto-file-renaming=false > /dev/null
+echo "Extracting Pizza-Chili Corpus"
+for f in *.7z
+do
+    7z e  $f -aoa 2&>1 /dev/null
+done
+
+cd ../manzini
+echo "Downloading Manzini Corpus" 
+aria2c -i ../manzini.info -c --auto-file-renaming=false  > /dev/null
+echo "Extracting Manzini Corpus"
+for f in *.bz2
+do
+    bunzip2 $f 2&>1 /dev/null
+done
+
+echo "Running Benchmark"
