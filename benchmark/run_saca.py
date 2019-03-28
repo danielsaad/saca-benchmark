@@ -70,7 +70,7 @@ print("Running Manzini Corpus")
 with open('manzini.csv','w') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(['Experiment', 'SAIS Nong', 'SAIS Yuta', 'Divsufsort'])
-    for f in pizza_chili_files:
+    for f in manzini_files:
         t = []
         t.append(run_nong(f))
         t.append(run_yuta(f))
