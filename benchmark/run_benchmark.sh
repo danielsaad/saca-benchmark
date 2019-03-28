@@ -34,5 +34,7 @@ do
     bunzip2 $f 2&>1 /dev/null
 done
 
+cd ../../benchmark 
 echo "Running Benchmark"
+chmod +x run_saca.py
 python3 run_saca.py
