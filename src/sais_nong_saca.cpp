@@ -5,7 +5,6 @@
 #include "sais_nong.hpp"
 
 using namespace std;
-
 using namespace std::chrono;
 using timer = std::chrono::high_resolution_clock;
 

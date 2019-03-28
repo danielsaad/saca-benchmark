@@ -5,7 +5,6 @@
 #include "divsufsort.h"
 
 using namespace std;
-
 using namespace std::chrono;
 using timer = std::chrono::high_resolution_clock;
 
@@ -41,6 +40,5 @@ int main(int argc, char *argv[]) {
 
     cout << "time: " << (double)duration_cast<milliseconds>(stop - start).count()/1000.0
          << " seconds" << endl;
-    output.close();
     return 0;
 }

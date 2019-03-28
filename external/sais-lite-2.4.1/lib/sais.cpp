@@ -26,7 +26,7 @@
 
 #include <assert.h>
 #include <stdlib.h>
-#include "sais.h"
+#include "sais.hpp"
 
 #ifndef UCHAR_SIZE
 # define UCHAR_SIZE 256

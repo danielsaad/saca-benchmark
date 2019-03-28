@@ -3,12 +3,17 @@ cmake_minimum_required(VERSION 2.4.4)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules")
 include(AppendCompilerFlags)
 
+
+SET(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR})
+
+
 ## Project information ##
 project(libdivsufsort C)
 set(PROJECT_VENDOR "Yuta Mori")
 set(PROJECT_CONTACT "yuta.256@gmail.com")
 set(PROJECT_URL "https://github.com/y-256/libdivsufsort")
 set(PROJECT_DESCRIPTION "A lightweight suffix sorting library")
+set(CMAKE_VERBOSE_MAKEFILE on)
 include(VERSION.cmake)
 
 ## CPack configuration ##

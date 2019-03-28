@@ -1,8 +1,10 @@
-#include "sais.h"
+#include "sais.hpp"
+#include <chrono>
 #include <cstring>
 #include <fstream>
 #include <iostream>
 
+using namespace std;
 using namespace std::chrono;
 using timer = std::chrono::high_resolution_clock;
 
@@ -29,12 +31,11 @@ int main(int argc, char *argv[]) {
     load_string_from_file(str, argv[1]);
 
     size_t n = strlen(str) + 1;
-    sa_int32_t *SA = new sa_int32_t[n];
-    sa_int32_t k = 256;
+    int *SA = new int[n];
 
     std::cout << "Building SA with SAIS-YUTA." << std::endl;
     auto start = timer::now();
-    sais_u8((sa_uint8_t *)str, SA, n, k);
+    sais((const unsigned char*) str, SA, n);
     auto stop = timer::now();
 
     cout << "input:\t" << strlen(str) << " bytes" << endl;
