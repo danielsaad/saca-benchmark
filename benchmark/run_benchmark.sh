@@ -22,7 +22,7 @@ aria2c -i ../pizza-chili-repetitive.info -c --auto-file-renaming=false > /dev/nu
 echo "Extracting Pizza-Chili Corpus"
 for f in *.7z
 do
-    7z e  $f -aoa 2&>1 /dev/null
+    7z e  $f -aoa 
 done
 
 cd ../manzini
@@ -31,7 +31,7 @@ aria2c -i ../manzini.info -c --auto-file-renaming=false
 echo "Extracting Manzini Corpus"
 for f in *.bz2
 do
-    bunzip2 $f 2&>1 /dev/null
+    bunzip2 $f 
 done
 
 cd ../../benchmark 
