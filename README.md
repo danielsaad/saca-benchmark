@@ -6,9 +6,10 @@ Benchmark for Suffix Array Construction Algorithms
 
 It is necessary to have
 - CMake >= 2.8
-- Aria2 
+- aria2 
 - Python3 with csv module installed
-- 
+- g++ >= 4.9
+  
 ## Running Benchmark
 
 ```sh
@@ -68,3 +69,55 @@ Machine configuration:
 | sources.001.2          |   46.78   |   13.04   |    11.54   |
 | tm29                   |   125.30  |   25.58   |    82.93   |
 | world_leaders          |   15.01   |    3.72   |    2.88    |
+
+
+
+Machine configuration:
+- Processor: 2x Intel(R) Xeon(R) CPU E5-2640 v3 @ 2.60GHzv (16 cores + 16 threads)
+- Ram Memory: 60GB DDR4 2133 MhZ  
+- Operating System: CentOS 7
+
+
+
+
+|  Manzini Corpus |           |           |            |
+|:---------------:|:---------:|:---------:|:----------:|
+| Experiment      | SAIS Nong | SAIS Yuta | Divsufsort |
+|-----------------|-----------|-----------|------------|
+| chr22.dna       | 4.61      | 2.96      | 3.36       |
+| etext99         | 18.24     | 10.80     | 10.57      |
+| gcc-3.0.tar     | 0.04      | 0.04      | 0.05       |
+| howto           | 5.10      | 3.36      | 3.36       |
+| jdk13c          | 5.26      | 3.60      | 3.57       |
+| linux-2.4.5.tar | 0.06      | 0.05      | 0.06       |
+| rctail96        | 14.40     | 10.13     | 10.27      |
+| rfc             | 0.10      | 0.08      | 0.08       |
+| sprot34.dat     | 14.51     | 10.10     | 9.59       |
+| w3c2            | 5.26      | 3.19      | 3.79       |
+
+
+
+| Pizza-Chili Repetitive |           |           |            |
+|:----------------------:|:---------:|:---------:|:----------:|
+| Experiment       | SAIS Nong | SAIS Yuta | Divsufsort |
+|------------------|-----------|-----------|------------|
+| cere             | 69.50     | 36.56     | 45.99      |
+| coreutils        | 25.34     | 15.61     | 18.18      |
+| dblp.xml.00001.1 | 12.31     | 7.54      | 8.99       |
+| dblp.xml.00001.2 | 12.32     | 7.73      | 8.99       |
+| dblp.xml.0001.1  | 13.33     | 7.72      | 9.47       |
+| dblp.xml.0001.2  | 12.99     | 7.82      | 9.69       |
+| dna.001.1        | 12.83     | 8.01      | 10.39      |
+| einstein.de.txt  | 11.68     | 7.34      | 8.07       |
+| einstein.en.txt  | 71.56     | 38.72     | 45.84      |
+| english.001.2    | 15.36     | 8.77      | 10.69      |
+| Escherichia_Coli | 14.70     | 11.01     | 11.90      |
+| fib41            | 26.61     | 15.52     | 37.78      |
+| influenza        | 18.89     | 12.07     | 14.32      |
+| kernel           | 33.55     | 20.38     | 24.13      |
+| para             | 59.66     | 35.45     | 43.98      |
+| proteins.001.1   | 15.95     | 8.96      | 10.77      |
+| rs.13            | 21.75     | 12.34     | 34.07      |
+| sources.001.2    | 12.80     | 8.34      | 8.54       |
+| tm29             | 24.59     | 15.47     | 46.74      |
+| world_leaders    | 3.87      | 2.53      | 2.11       |
