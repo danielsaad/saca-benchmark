@@ -83,7 +83,6 @@ Machine configuration:
 |  Manzini Corpus |           |           |            |
 |:---------------:|:---------:|:---------:|:----------:|
 | Experiment      | SAIS Nong | SAIS Yuta | Divsufsort |
-|-----------------|-----------|-----------|------------|
 | chr22.dna       | 4.61      | 2.96      | 3.36       |
 | etext99         | 18.24     | 10.80     | 10.57      |
 | gcc-3.0.tar     | 0.04      | 0.04      | 0.05       |
@@ -100,7 +99,6 @@ Machine configuration:
 | Pizza-Chili Repetitive |           |           |            |
 |:----------------------:|:---------:|:---------:|:----------:|
 | Experiment       | SAIS Nong | SAIS Yuta | Divsufsort |
-|------------------|-----------|-----------|------------|
 | cere             | 69.50     | 36.56     | 45.99      |
 | coreutils        | 25.34     | 15.61     | 18.18      |
 | dblp.xml.00001.1 | 12.31     | 7.54      | 8.99       |
